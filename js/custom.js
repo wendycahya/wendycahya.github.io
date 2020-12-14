@@ -104,11 +104,10 @@ $(document).ready(function () {
     });
 
     //animatedModal
+    $("#demo1").animatedModal({modalTarget: 'model2'});
     $("#demo02,#demo03,#demo04,#demo05,#demo06,#demo07,#demo08,#demo09").animatedModal();
 
-    $("#demo1").animatedModal({
-        modalTarget: 'animatedModal2'
-    });
+    
     // Contact Form 	
 
     // validate contact form
