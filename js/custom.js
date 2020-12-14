@@ -104,8 +104,15 @@ $(document).ready(function () {
     });
 
     //animatedModal
-    $("#demo1").animatedModal({modalTarget: 'model2'});
-    $("#demo02,#demo03,#demo04,#demo05,#demo06,#demo07,#demo08,#demo09").animatedModal();
+    $("#demo01").animatedModal({
+        modalTarget: 'model-1'
+        });
+    $("#demo03,#demo04,#demo05,#demo06,#demo07,#demo08,#demo09").animatedModal({
+        modalTarget: 'animatedModal'
+        });
+    $("#demo02").animatedModal({
+        modalTarget: 'animatedModal'
+        });
 
     
     // Contact Form 	

@@ -621,6 +621,17 @@ a.active {
     opacity: 1;
 }
 
+/*
+Bismillah belajar editing CSS
+*/
+.model-1-on .close-popup-modal {
+    opacity: 1;
+}
+
+/*
+End Bismillah belajar editing CSS
+*/
+
 .modal-content h2 {
     font-family: 'Playfair Display', serif;
     font-size: 40px;
