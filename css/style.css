@@ -152,11 +152,13 @@ body {
         margin-top: -30px;
         margin-left: -30px
     }
+
     .preloader:before {
         left: -2px;
         top: -2px;
         border-width: 2px
     }
+
     .preloader>.icon {
         height: 37.5px;
         width: 15.9px;
@@ -172,6 +174,7 @@ body {
         margin-top: -30px;
         margin-left: -30px
     }
+
     .preloader>.icon {
         height: 50px;
         width: 21.2px;
@@ -185,6 +188,7 @@ body {
         -webkit-transform: rotate(0);
         transform: rotate(0)
     }
+
     to {
         -webkit-transform: rotate(359deg);
         transform: rotate(359deg)
@@ -196,6 +200,7 @@ body {
         -webkit-transform: rotate(0);
         transform: rotate(0)
     }
+
     to {
         -webkit-transform: rotate(359deg);
         transform: rotate(359deg)
@@ -206,6 +211,7 @@ body {
     from {
         opacity: 0
     }
+
     to {
         opacity: 1
     }
@@ -215,6 +221,7 @@ body {
     from {
         opacity: 0
     }
+
     to {
         opacity: 1
     }
@@ -631,6 +638,11 @@ Bismillah belajar editing CSS
 .model-2-on .close-popup-modal {
     opacity: 1;
 }
+
+.model-3-on .close-popup-modal {
+    opacity: 1;
+}
+
 /*
 End Bismillah belajar editing CSS
 */
@@ -793,13 +805,16 @@ fieldset {
         font-size: 50px;
         line-height: 50px;
     }
+
     #home,
     .disply-table {
         height: 600px;
     }
+
     .about-border {
         width: 265px;
     }
+
     .portfolio .categories-grid .categories ul li {
         list-style: none;
         margin: 10px 0;
@@ -810,6 +825,7 @@ fieldset {
     nav li {
         margin: 6px;
     }
+
     nav li a {
         font-size: 10px;
     }

@@ -110,7 +110,10 @@ $(document).ready(function () {
     $("#demo02").animatedModal({
         modalTarget: 'model-2'
         });
-    $("#demo03,#demo04,#demo05,#demo06,#demo07,#demo08,#demo09").animatedModal({
+    $("#demo03").animatedModal({
+        modalTarget: 'model-3'
+    });
+    $("#demo04,#demo05,#demo06,#demo07,#demo08,#demo09").animatedModal({
         modalTarget: 'animatedModal'
         });
 
