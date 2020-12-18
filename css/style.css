@@ -806,7 +806,8 @@ fieldset {
 
 @media (max-width: 500px) {
     h1 {
-        font-family: 'Playfair Display', serif;
+        font-family: 'Lato', sans-serif;
+        font-weight: 900;
         font-size: 50px;
         line-height: 50px;
     }
