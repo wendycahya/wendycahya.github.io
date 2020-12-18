@@ -653,7 +653,8 @@ End Bismillah belajar editing CSS
 */
 
 .modal-content h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
     font-size: 40px;
     line-height: 50px;
 }
