@@ -121,7 +121,7 @@ $(document).ready(function () {
     });
     $("#demo06,#demo07,#demo08,#demo09").animatedModal({
         modalTarget: 'animatedModal'
-        });
+    });
 
 
     
