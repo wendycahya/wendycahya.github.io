@@ -123,6 +123,10 @@ $(document).ready(function () {
         modalTarget: 'animatedModal'
     });
 
+    //extended pages
+    $("#demo-journey").animatedModal({
+        modalTarget: 'model-exp'
+    });
 
     
     // Contact Form 	
