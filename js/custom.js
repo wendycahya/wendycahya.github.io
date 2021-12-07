@@ -128,6 +128,9 @@ $(document).ready(function () {
         modalTarget: 'model-exp'
     });
 
+    $("#demo-publication").animatedModal({
+        modalTarget: 'model-publication'
+    });
     
     // Contact Form 	
 
