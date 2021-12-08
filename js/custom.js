@@ -132,6 +132,9 @@ $(document).ready(function () {
         modalTarget: 'model-publication'
     });
     
+    $("#demo-project").animatedModal({
+        modalTarget: 'model-project'
+    });
     // Contact Form 	
 
     // validate contact form
