@@ -119,7 +119,10 @@ $(document).ready(function () {
     $("#demo05").animatedModal({
         modalTarget: 'model-5'
     });
-    $("#demo06,#demo07,#demo08,#demo09").animatedModal({
+    $("#demo06").animatedModal({
+        modalTarget: 'model-6'
+    });
+    $("#demo07,#demo08,#demo09").animatedModal({
         modalTarget: 'animatedModal'
     });
 
@@ -131,11 +134,7 @@ $(document).ready(function () {
     $("#demo-publication").animatedModal({
         modalTarget: 'model-publication'
     });
-    
-    $("#demo-project").animatedModal({
-        modalTarget: 'model-project'
-    });
-    // Contact Form 	
+    // Contact Form
 
     // validate contact form
     $(function () {

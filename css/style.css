@@ -652,6 +652,10 @@ Bismillah belajar editing CSS
     opacity: 1;
 }
 
+.model-6-on .close-popup-modal {
+    opacity: 1;
+}
+
 /*extend*/
 .model-exp-on .close-popup-modal {
     opacity: 1;
@@ -661,9 +665,6 @@ Bismillah belajar editing CSS
     opacity: 1;
 }
 
-.model-project-on .close-popup-modal {
-    opacity: 1;
-}
 /*
 End Bismillah belajar editing CSS
 */
