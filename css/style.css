@@ -656,6 +656,10 @@ Bismillah belajar editing CSS
     opacity: 1;
 }
 
+.model-7-on .close-popup-modal {
+    opacity: 1;
+}
+
 /*extend*/
 .model-exp-on .close-popup-modal {
     opacity: 1;
