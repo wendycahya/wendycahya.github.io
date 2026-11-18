@@ -486,6 +486,10 @@ ol {
     border-color var(--micro-duration) var(--ease-expo-out);
 }
 
+.btn[hidden] {
+  display: none;
+}
+
 .btn-primary {
   background-color: var(--accent);
   color: var(--bg-primary);

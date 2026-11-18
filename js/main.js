@@ -350,35 +350,82 @@
   };
 
   /* --------------------------------------------------------------------------
-     7. Projects Category Filter & Accessible <dialog> Detail Modal
+     7. Projects Category Filter, Archive Toggle & Accessible <dialog> Detail Modal
      -------------------------------------------------------------------------- */
   const initProjectsAndModal = () => {
     const filterBtns = document.querySelectorAll('[data-project-filter]');
     const projectCards = document.querySelectorAll('.project-card');
+    const toggleBtn = document.getElementById('toggle-projects-archive');
+    const TOP_PROJECTS_LIMIT = 4;
+
+    let currentCategory = 'all';
+    let isExpanded = false;
+
+    const updateProjectsView = () => {
+      let matchingCount = 0;
+
+      projectCards.forEach((card) => {
+        const cardCat = card.getAttribute('data-category');
+        const matchesCat = currentCategory === 'all' || cardCat === currentCategory;
+
+        if (!matchesCat) {
+          card.setAttribute('hidden', '');
+          return;
+        }
+
+        matchingCount += 1;
+        const shouldShow =
+          currentCategory !== 'all' || isExpanded || matchingCount <= TOP_PROJECTS_LIMIT;
+
+        if (shouldShow) {
+          card.removeAttribute('hidden');
+        } else {
+          card.setAttribute('hidden', '');
+        }
+      });
+
+      if (toggleBtn) {
+        const extraCount = matchingCount - TOP_PROJECTS_LIMIT;
+        if (currentCategory !== 'all' || extraCount <= 0) {
+          toggleBtn.setAttribute('hidden', '');
+        } else {
+          toggleBtn.removeAttribute('hidden');
+          toggleBtn.setAttribute('aria-expanded', String(isExpanded));
+          toggleBtn.textContent = isExpanded
+            ? 'Show Selected Top 4 Projects ↑'
+            : `Show More Projects (+${extraCount} Case Studies) ↓`;
+        }
+      }
+    };
 
     filterBtns.forEach((btn) => {
       btn.addEventListener(
         'click',
         () => {
-          const category = btn.getAttribute('data-project-filter') || 'all';
+          currentCategory = btn.getAttribute('data-project-filter') || 'all';
           filterBtns.forEach((b) => {
             const active = b === btn;
             b.classList.toggle('is-active', active);
             b.setAttribute('aria-selected', String(active));
           });
-
-          projectCards.forEach((card) => {
-            const cardCat = card.getAttribute('data-category');
-            if (category === 'all' || cardCat === category) {
-              card.removeAttribute('hidden');
-            } else {
-              card.setAttribute('hidden', '');
-            }
-          });
+          updateProjectsView();
         },
         { signal }
       );
     });
+
+    if (toggleBtn) {
+      toggleBtn.addEventListener(
+        'click',
+        () => {
+          isExpanded = !isExpanded;
+          updateProjectsView();
+        },
+        { signal }
+      );
+    }
+
+    updateProjectsView();
 
     // Accessible Dialog Controller
     const dialog = document.getElementById('project-dialog');
