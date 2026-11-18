@@ -1,1 +1,0 @@
-# wendycahyawan.github.io
